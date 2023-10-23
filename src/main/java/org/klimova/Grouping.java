@@ -76,7 +76,7 @@ public class Grouping {
                 // Нам нужен список элементов с той же позицией. Если текущая строка оказалась длиннее предыдущих,
                 // списков позиций под ее последние элементы еще не существует, добавляем новый.
                 if (fillingOfPositions.size() == i) fillingOfPositions.add(new HashMap<>());
-                if (element.equals("\"\"")) continue; //Пустые элементы нам не интересны
+                if (element.equals("\"\"") || element.equals("")) continue; //Пустые элементы нам не интересны
                 Map<String, Integer> assortmentOfPosition = fillingOfPositions.get(i);
 
                 // Проверяем, встречался ли нам уже такой элемент на этой позиции. Если да, то нам вернется номер группы,
